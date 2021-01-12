@@ -1,0 +1,72 @@
+*{
+	box-sizing: border-box;
+}
+
+body {
+	background: grey;
+}
+
+.clock{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	border: 2px solid green;
+}
+
+.clock *{
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	border-radius: 100%;
+}
+
+.back{
+	width: 200px;
+	height: 200px;
+	background: dimgray;
+}
+
+.bezel{
+	width: 180px;
+	height: 180px;
+	background: darkgrey;
+}
+
+.face{
+	position: relative;
+	width: 170px;
+	height: 170px;
+	background: whitesmoke;
+}
+
+.dial{
+	width: 15px;
+	height: 15px;
+	z-index: 1;
+}
+
+.hand{
+	transform-origin: 100%;
+	border-radius: 0;
+	width: 50%;
+	height: 6px;
+	background: black;
+	border-radius: 2px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(90);
+	transform: rotate(90deg);
+	transition: all 0.08s;
+    transition-timing-function: cubic-bezier(0.1, 1.9, 1, 0.07);
+    color: white;
+    font-size: 7px;
+}
+
+.seconds{
+	background: darkturquoise;
+}
+
+.noTransition {
+	transition: none;
+}
